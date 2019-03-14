@@ -37,6 +37,7 @@ def predict():
      #query = pd.get_dummies(query_df)
      #inputarray = np.array([[411.0,417.0,6.0,417.0,411.0,417.0,414.54,2.95,8.71,-1.87,-0.37]])
      #input_query - np.array([[411.0,417.0,6.0,417.0,411.0,417.0,414.54,2.95,8.71,-1.87,-0.37]])
+     clf = joblib.load('model.pkl')
      prediction = clf.predict([inputarray])
      percentage_predictions = clf.predict_proba([inputarray])
      #print(type(percentage_predictions))
