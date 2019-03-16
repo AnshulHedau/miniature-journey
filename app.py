@@ -26,6 +26,7 @@ def index():
 @app.route('/predict', methods=['GET'])
 def predict():
      json_ = request.json
+     clf = joblib.load('model.pkl')
      myvar = request.args["myvar"]
      parameter_list = myvar.split(',')
      myvar = parameter_list[0]
