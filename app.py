@@ -64,8 +64,9 @@ def predict():
      else:
          print("Normal")
 
-     return jsonify({'prediction': list(prediction),'ceremics':percentage_predictions[0][0],'paper':percentage_predictions[0][1],'wood':0,'metal':0})
-
+     return_value = {"message": "Welcome to the Miniature Journey API!"}
+     json_string = json.dumps(return_value)
+     return json_string
 
 # Help page
 @app.route("/help")
