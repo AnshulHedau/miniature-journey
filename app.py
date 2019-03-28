@@ -85,5 +85,4 @@ def page_not_found(e):
 
 if __name__ == "__main__":
     app.debug = True
-    clf = joblib.load('model.pkl')
     app.run()
