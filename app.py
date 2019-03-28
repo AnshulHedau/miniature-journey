@@ -52,7 +52,7 @@ def predict():
          else:
              z_gyro.append(mean_gyro[0])
 
-     z_gyro = z_gyro[-25:]
+     z_gyro = z_gyro[-35:-10]
      test_gyro = []
      test_gyro.append(z_gyro)
      test_gyro = np.array(test_gyro)
@@ -61,10 +61,10 @@ def predict():
 
      if (result_test[0][1] > result_test[0][0]):
          print("Rash")
+         return_value = {"message": "Rash"}
      else:
          print("Normal")
-
-     return_value = {"message": "Welcome to the Miniature Journey API!"}
+         return_value = {"message": "Normal"}
      json_string = json.dumps(return_value)
      return json_string
 
