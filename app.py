@@ -46,7 +46,7 @@ def predict():
      z_gyro = []
      mean_gyro = [-0.10162200279091103]
      for key, value in stored_data.items():
-         if (len(value) > 4):
+         if (len(value) > 6):
              z_gyro.append(value['gyro_z'])
              mean_gyro = [value['gyro_z']]
          else:
